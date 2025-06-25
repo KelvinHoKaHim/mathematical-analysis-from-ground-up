@@ -1,11 +1,14 @@
 ---
-title: [The Real Number \#01] Pythagoras and the Myth of Rational Number
+title: 〖The Real Number \#01〗 Pythagoras and the Myth of Rational Number
 date: 2025-06-25 +0800
 categories: [Analysis of Onc variable, The Real Number]
 tags: [mathematical-analysis, real-number, Pythagoras, Pythagoras's-theorem, rational-number]     # TAG names should always be lowercase
 ---
 
 ## Pythagoras Theorem Exposes Fault of the Rational Numbers
+
+It is indeed a great innovation of the human mind to discover 
+
 The Pythagorean theorem was well-known in many ancient cultures, including the Babylonians and Indians, but it was the Greeks who first provided a proof, to which its discovery was often attributed to the Pythagorean school.
 
 <b>Theorem 1. (Pythagoras' Theorem)</b> <i>In a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.
