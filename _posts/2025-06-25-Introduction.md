@@ -1,6 +1,6 @@
 ---
 title: Introduction
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: 2025-06-25 +0800
 categories: [Introduction]
 tags: [mathematical-analysis]     # TAG names should always be lowercase
 ---
