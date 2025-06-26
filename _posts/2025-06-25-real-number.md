@@ -25,7 +25,7 @@ $$
 
 Hence, it seemed that any length could either be desribed by a integer multiple of a certain unit, or a ratio between another length.
 
-![two-sticks](../image/2025-06-25-real-number-01.svg){: width="700"}
+![two-sticks](image/2025-06-25-real-number-01.svg){: w="700"}
 _Comparing the length of two sticks_
 ## Pythagoras Theorem Exposes Fault of the Rational Numbers
 
