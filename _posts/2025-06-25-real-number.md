@@ -18,7 +18,8 @@ But this method of measurement assumed that for any two length, there exists a c
 
 Suppose that we have two stick $A$ and $B$, each with length $5$ units and $2$ units. We can describe the length of $A$ with the length of $B$ without explicitly referring to their common unit. which to express the relation of their length as ratios. In our case, the length of $A$ and $B$ has a ratio of $5:2$. Then, to find the length of $A$ given $B$, we can divide $B$ into two parts, then add up the length of that part five times. The resultant length of be equivalent to that of $A$. 
 
-Putting all those cumbersome terminologies aside, this is basically saying that the relation of the length of $A$ and length of $B$ can be expressed 
+Putting all those cumbersome terminologies aside, this is basically saying that the relation of the length of $A$ and length of $B$ can be expressed as
+
 $$
 length_A = \frac{5}{2} \times length_B
 $$
