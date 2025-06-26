@@ -26,7 +26,7 @@ $$
 Hence, it seemed that any length could either be desribed by a integer multiple of a certain unit, or a ratio between another length.
 
 ![two-sticks](image/2025-06-25-real-number-01.jpg){: w="700"}
-_Comparing the length of two sticks_
+_Comparing the length of two sticks._
 ## Pythagoras Theorem Exposes Fault of the Rational Numbers
 
 The Pythagorean theorem was well-known in many ancient cultures, including the Babylonians and Indians, but it was the Greeks who first provided a proof, to which its discovery was often attributed to the Pythagorean school.
@@ -53,6 +53,9 @@ The Pythagorean theorem prompted the discovery of irrational numbers. Consider a
 
 This fact shows that the rational numbers is <i>incomplete</i>, in the sense that not all quantity can be represented by a rational numbers. There are many "holes" in the rational line. 
 Hence, we need to define a larger system of numbers to fill in these holes----the set of real numbers $\mathbb{R}$.
+
+![hole-in-real-number](image/2025-06-25-real-number-02.jpg){: w="700"}
+_There are many "holes" in the rational line. The hole at $\sqrt{2}$ is one of them._
 
 In the next few section, we will try to achieve the following thing: 
 1. Identify the defining properties of the real numbers.
