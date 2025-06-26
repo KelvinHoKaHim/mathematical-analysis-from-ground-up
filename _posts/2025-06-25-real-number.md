@@ -63,5 +63,7 @@ In the next few section, we will try to achieve the following thing:
 3. Demonstrate why the properties uniquely pick out a certain structure.
 4. Prove that such a structure do indeed exists.
 
+![hierarchy-of-numbers](image/2025-06-25-real-number-03.jpg){: w="700"}
+_The hierarchy of numbers._
 
 ## Real Numbers is Ordered
