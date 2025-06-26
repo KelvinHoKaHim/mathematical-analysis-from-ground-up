@@ -39,7 +39,7 @@ where $c$ is the length of the hypotenuse and $a$ and $b$ are the lengths of the
 
 <i>Proof.</i><br>&#x25A1;
 
-The Pythagorean theorem prompted the discovery of irrational numbers. Consider a right triangle with both legs of length $1$ unit. By the Pythagorean theorem, the length of the hypotenuse is $\sqrt{2}$ unit. However, it can be proved that $\sqrt{2}$ is not a could never be represented as the ratio of two integers, which can be found in Euclide's <i>Element</i>.
+The Pythagorean theorem prompted the discovery of irrational numbers. Consider a right triangle with both legs of length $1$ unit. By the Pythagorean theorem, the length of the hypotenuse is $\sqrt{2}$ unit. However, it can be proved that $\sqrt{2}$ is not a could never be represented as the ratio of two integers, which can be found in Euclid's <i>Element</i>.
 
 <b>Lemma 1. (Euclid's lemma)</b> <i>Let $p,m,n\in\mathbb{Z}$, where $p$ is a prime number. Suppose $p\mid mn$. Then $p|m$ or $p|n$.</i>
 
@@ -49,7 +49,7 @@ The Pythagorean theorem prompted the discovery of irrational numbers. Consider a
 
 <b>Theorem 2.</b> <i>The number $\sqrt{2}$ is irrational.</i>
 
-<i>Proof.</i> Suppose $\sqrt{2}$ is rational, then there is $m,n\in\mathbb{Z}$. where $\text{gcd}(m,n) = 1$, such that $\sqrt{2} = m/n$ , which means $m^2 = 2n^2$. Since $2|m^2$, Euclid's lemma implies that $2|m$. Then there is some $k\in\mathbb{Z}$ such that $m = 2k$. Substituting this equation to $m^2 = 2n^2$, we have $2k^2 = n^2$. Applying Euclid's lemma again, we have $2|n$. This contradicts the assumption that $\text{gcd}(m,n) = 1$. Therefore, $\sqrt{2}$ is irrational.<br>&#x25A1;
+<i>Proof.</i> Suppose $\sqrt{2}$ is rational, then there is $m,n\in\mathbb{Z}$. where $\text{gcd}(m,n) = 1$, such that $\sqrt{2} = m/n$ , which means $m^2 = 2n^2$. Since $2\mid m^2$, Euclid's lemma implies that $2\mid m$. Then there is some $k\in\mathbb{Z}$ such that $m = 2k$. Substituting this equation to $m^2 = 2n^2$, we have $2k^2 = n^2$. Applying Euclid's lemma again, we have $2\mid n$. This contradicts the assumption that $\text{gcd}(m,n) = 1$. Therefore, $\sqrt{2}$ is irrational.<br>&#x25A1;
 
 This fact shows that the rational numbers is <i>incomplete</i>, in the sense that not all quantity can be represented by a rational numbers. There are many "holes" in the rational line. 
 Hence, we need to define a larger system of numbers to fill in these holes----the set of real numbers $\mathbb{R}$.
