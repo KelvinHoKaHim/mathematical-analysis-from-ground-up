@@ -3,7 +3,7 @@ title: The Inception of Real Number
 date: 2025-06-25 +0800
 categories: [01 Real Analysis of One Variable, The Real Number]
 tags: [real-analysis, real-number, Pythagoras, Pythagoras's-theorem, rational-number, Aristotle, Dedekind-cut]     
-math: true
+math: true 
 ---
 
 ## Aristotle's Conception of Continuity
@@ -139,4 +139,46 @@ In the next few section, we will try to achieve the following thing:
 ![hierarchy-of-numbers](image/2025-06-25-real-number-03.jpg){: w="700"}
 _The hierarchy of numbers._
 
+## Real Number is a Field
+A field is a fancy way to say that we are able to perfrom addition, substraction, multicationa and division between elements in the sets. Where addition and multiplcation are equipped with the nice properties that we expect from usual algebraic operation, that is <i>commutativity</i>, <i>associativity</i>, and <i>distributivity</i>. 
+Now, it is quite clear that we want to do all these operations on the real number line.
+
+<b>Definition 1. (Field)</b> Let $\mathbb F$ be a set, and $+,\cdot:\mathbb F\times\mathbb F\to\mathbb F$ are binary operations such that the following are satisfied. 
+1. <i>Commutativity.</i> For any $x,y\in \mathbb F$, $x+y=y+x$ and $x\cdot y = y\cdot x$.
+2. <i>Associativity.</i> For any $x,y,z\in\mathbb F$, $x+(y+z) = (x+y) + z$ and $x\cdot(y\cdot z) = (x\cdot y) \cdot z$.
+3. <i>Distributivity.</i> For any $x,y,z\in\mathbb F$, $x\cdot(y+z) = x\cdot y + x\cdot z$.
+4. <i>Additive identity (Zero).</i> There exists a $0\in\mathbb F$ such that for any $x\in\mathbb F$, $x + 0 = 0$.
+5. <i>Multiplicative identity (One).</i> There exists a $1\in\mathbb F$ such that for any $x\in\mathbb F$, $x \cdot 1 = x$.
+6. <i>Additive inverse. </i> For any $x\in \mathbb F$, there exists a $-x\in\mathbb F$ such that $x + (-x) = 0$. 
+7. <i>Multiplicative inverse.</i> For any non-zero $x\in\mathbb F$, there is a $x^{-1}\in\mathbb F$ such that $x \cdot x^{-1} = 1$.
+
+Notice that the natural number $\mathbb N$ does not form a field, since $1$ has no additive identity, nor does the integers $\mathbb Z$ for it lack of multiplicative identity for $2$. However, $\mathbb Q$ is a field. One can easily verify that. 
+
 ## Real Numbers is Ordered
+
+Take two distinct real numbers, we have mentioned that no matter how small the difference are, there are always a third number in between. Now to have a notion of betweeness, we necessarily presuppose orderedness in the real number line. For to say $c$ is between $a$ and $b$, is to say either $a < c < b$ or $b < c < a$. Moreover, it seemed betweenness only make sense if every two real number can be compared. 
+
+Mathematician have found two ways to capture the idea of orderedness.
+
+<b>Definition 2. (Order)</b> Let $X$ be a set and $R$ is a relation on $R$. $(X,R)$ is said to be an ordered set if it satisfies 
+
+1. <i>Reflexivity.</i> For any $x\in X$, $xRx$.
+2. <i>Anti-symmetry.</i> For any $x,y\in X$ if $xRy$ and $yRx$, then $x=y$.
+3. <i>Transitivity.</i> For any $x,y,z\in X$, if $xRy$ and $yRz$, then $xRz$.
+
+Moreover, $R$ is said be a total ordering if for any $x,y\in X$, either $xR y$ or $y Rx$.
+
+<b>Definition 3. (Strict Order)</b> Let $X$ be a set and $R$ is a relation on $R$. $(X,R)$ is said to be an strict ordered set if it satisfies 
+
+1. <i>Irreflexivity.</i> For any $x\in X$, $\lnot xRx$.
+2. <i>Asymmetry.</i> For any $x,y\in X$ if $xRy$, then $\lnot yRx$. 
+3. <i>Transitivity.</i> For any $x,y,z\in X$, if $xRy$ and $yRz$, then $xRz$.
+
+Moreover, $R$ is said be a strict total ordering if for any $x,y\in X$, either $xR y$ or $y Rx$.
+
+We usually denote ordering by $\leq$ or $\geq$, and strict ordering by $<$ or $>$. The notation implied the two definitions captures the idea of non-strict ordering that conveys the idea of "less than or equal to", and strict ordering conveys the idea of "less than and not equal to". Of course, this claim needs proof. 
+
+<b>Proposition 1.</b> Let $(X, \leq)$ be an ordered set. Let $<$ be a relation defined by for any $x,y\in X$, $x < y$ if and only if $x\leq y$ and $x\neq y$. Then $<$ is a strict ordering. 
+
+<i>Proof.</i>  
+For irreflexivity, for any $x\in X$, since it is not true that $x\neq x$, then we have $\lnot x< x$. For asymmetry, suppose $x< y$, then $x\leq y$ and $x\neq y$. By anti-symmetry, we have $x\leq y\wedge y\leq x\to x=y$, which is equivalent to $x\leq y\to \lnot (y\leq x)\vee x=y$. Hence, we have either $\lnot(y\leq x)$ or $x=y$. But since we already have established $x\neq y$, we must have $\lnot(y\leq x)$. Then $\lnot(y\leq x) \vee x=y$ is also true, which means 
