@@ -1,5 +1,5 @@
 ---
-title: The Inception of Real Number
+title: Real Analysis 01 | The Inception of Real Number
 date: 2025-06-25 +0800
 categories: [01 Real Analysis of One Variable, The Real Number]
 tags: [real-analysis, real-number, Pythagoras, Pythagoras's-theorem, rational-number, Aristotle, Dedekind-cut]     
@@ -152,8 +152,129 @@ Now, it is quite clear that we want to do all these operations on the real numbe
 6. <i>Additive inverse. </i> For any $x\in \mathbb F$, there exists a $-x\in\mathbb F$ such that $x + (-x) = 0$. 
 7. <i>Multiplicative inverse.</i> For any non-zero $x\in\mathbb F$, there is a $x^{-1}\in\mathbb F$ such that $x \cdot x^{-1} = 1$.
 
-Notice that the natural number $\mathbb N$ does not form a field, since $1$ has no additive identity, nor does the integers $\mathbb Z$ for it lack of multiplicative identity for $2$. However, $\mathbb Q$ is a field. One can easily verify that. 
+Richard Dedekind was the first to formalise the idea of a field. According to Dedekind, this was his motivation:
 
+> By a field we will mean every infinite system of real or complex numbers so closed in itself and perfect that addition, subtraction, multiplication, and division of any two of these numbers again yields a number of the system.
+
+The key here is <i>closure</i>: Given any two numbers in the system, no matter what operation I do, the resultant element is going to be a number in the system. 
+
+When we revisit the natural number, we would easily observe that it is not closed in subtraction. For example $1-2$ would give us something not in $\mathbb N$. The system of integer $\mathbb Z$ resolves the problem by adding negative numbers. However, $\mathbb Z$ is still not closed under division, which lead us to the formulation of rational numbers $\mathbb Q$. Now, to define the real numbers $\mathbb R$, we want this to also inherit this nice property of being closed. 
+
+For the remainder of this section, I will prove some more properties that the real number system should possess. Or, to say it more generally, a field should possess. I know, they are going to be boring. But they are necessary.
+
+<b>Proposition 1.</b> Let $\mathbb F$ be a field. Then its additive identity and multiplicative identity are unique. 
+
+<i>Proof. </i> Let $0,0'\in\mathbb F$ both be additive identities. Then we have 
+$$
+\begin{align*}
+0 &= 0 + 0' \tag{Additive identity}\\
+&= 0' + 0 \tag{Commutativity}\\
+&= 0' \tag{Additive identity}\\
+\end{align*}
+$$
+Let $1,1'\in\mathbb F$ both be multiplicative identity. Then 
+$$
+\begin{align*}
+1 &= 1 \cdot 1'  \tag{Multiplcative identity}\\
+&= 1' \cdot 1 \tag{Commutativity}\\
+&= 1' \tag{Multiplcative identity}\\
+\end{align*} 
+$$
+<br>&#x25A1;
+
+<b>Proposition 2.</b> Let $\mathbb F$ be a field. For any $x,y\in\mathbb F$, if $x + y = x$. Then $y= 0$.
+
+<i>Proof.</i>
+$$
+\begin{align*}
+y &= y + 0\tag{Additive identity}\\
+&= y + (x - x)\tag{Addtive inverse}\\
+&= (y+x) - x\tag{Associativity}\\
+&= (x+y) - x\tag{Commutativity}\\
+&= x - x\\
+&= 0 \tag{Additive inverse}
+\end{align*}
+$$
+<br>&#x25A1;
+
+<b>Proposition 3</b> let $\mathbb F$ be a field. For any $x,y,z\in\mathbb F$, if $x + y = x + z$. Then $y = z$.
+<i>Proof.</i>
+$$
+\begin{align*}
+y &= y + 0 \tag{Additive identity}\\
+&= y + (x-x)\tag{Additive inverse}\\
+&= (y+x) - x\tag{Associativity}\\
+&=(x+y) - x\tag{Commutativity}\\
+&= (x+z) - x\\
+&= (z+x) - x\tag{Commutativity}\\
+&= z + (x-x)\tag{Associativity}\\
+&= z + 0\tag{Additive inverse}\\
+&= z\tag{Additive identity}
+\end{align*}
+$$
+<br>&#x25A1;
+
+
+<b>Proposition 4.</b> Let $\mathbb F$ be a field. Then for any $x\in\mathbb F$, $x\cdot 0 = 0$ 
+
+<i>Proof.</i>
+$$
+\begin{align*}
+x\cdot 0 &= x\cdot(0+0)\tag{Additive identity}\\
+&= x\cdot 0 + x\cdot 0\tag{Distributivity}
+\end{align*}
+$$
+By proposition 2, $x\cdot 0 = 0$.
+<br>&#x25A1;
+
+
+<b>Proposition 5.</b> Let $\mathbb F$ be a field. Then for any $x,y\in \mathbb F$, $(-x)\cdot y = x\cdot( -y) = -(x\cdot y)$
+
+<i>Proof.</i>
+$$
+\begin{align*}
+xy - xy &= 0\tag{Additive inverse}\\
+&= y\cdot 0\tag{Proposition 3}\\
+&= y\cdot(x - x)\tag{Additive inverse}\\
+&= y\cdot x +y\cdot(-x)\tag{Distributivity}\\
+&= x\cdot y + (-x)\cdot y\tag{Commutativity}
+\end{align*}
+$$
+By proposition 3, we know $-xy = (-x)\cdot y$.
+By a similar argument, we have
+$$
+\begin{align*}
+xy - xy &= 0\tag{Additive inverse}\\
+&= x\cdot 0\tag{Proposition 3}\\
+&= x\cdot(y - y)\tag{Additive inverse}\\
+&= x\cdot y +x\cdot(-y)\tag{Distributivity}\\
+&= x\cdot y + x\cdot(-y)\tag{Commutativity}
+\end{align*}
+$$
+By proposition 3, we have $-xy = x\cdot(- y)$.
+<br>&#x25A1;
+
+<b>Proposition 6.</b> Let $\mathbb F$ be a field. $\mathbb F$ is a singleton if and only if $1= 0$.
+
+<i>Proof.</i>
+
+($\Rightarrow$) This direction is obvious.
+
+($\Leftarrow$) Suppose $1=0$. Then for any $x\in\mathbb F$, we have 
+$$
+\begin{align*}
+x &= x\cdot 1\tag{Multiplicative identity}\\
+&= x\cdot 0\\
+&= x\cdot(1 - 1)\tag{Additive inverse}\\
+&= x\cdot 1  + x\cdot(-1)\tag{Distributivity}\\
+&= x\cdot 1 - x\cdot 1\tag{Proposition 5}\\
+&= 0
+\end{align*}
+$$
+Hence, $\mathbb F$ is a singleton. 
+<br>&#x25A1;
+
+Propositions I have proved here are nothing amazing. We have been using them since a little kid. I have reproduced their proof in great detail anyway, with the intent to emphasise that these proposition which we deem obvious are ultimately grounded by commutativity, associativty, and distributivity. 
 ## Real Numbers is Ordered
 
 Take two distinct real numbers, we have mentioned that no matter how small the difference are, there are always a third number in between. Now to have a notion of betweeness, we necessarily presuppose orderedness in the real number line. For to say $c$ is between $a$ and $b$, is to say either $a < c < b$ or $b < c < a$. Moreover, it seemed betweenness only make sense if every two real number can be compared. 
@@ -178,7 +299,30 @@ Moreover, $R$ is said be a strict total ordering if for any $x,y\in X$, either $
 
 We usually denote ordering by $\leq$ or $\geq$, and strict ordering by $<$ or $>$. The notation implied the two definitions captures the idea of non-strict ordering that conveys the idea of "less than or equal to", and strict ordering conveys the idea of "less than and not equal to". Of course, this claim needs proof. 
 
-<b>Proposition 1.</b> Let $(X, \leq)$ be an ordered set. Let $<$ be a relation defined by for any $x,y\in X$, $x < y$ if and only if $x\leq y$ and $x\neq y$. Then $<$ is a strict ordering. 
+<b>Proposition 7.</b> Let $(X, \leq)$ be an ordered set. Let $<$ be a relation defined by for any $x,y\in X$, $x < y$ if and only if $x\leq y$ and $x\neq y$. Then $<$ is a strict ordering. 
 
 <i>Proof.</i>  
-For irreflexivity, for any $x\in X$, since it is not true that $x\neq x$, then we have $\lnot x< x$. For asymmetry, suppose $x< y$, then $x\leq y$ and $x\neq y$. By anti-symmetry, we have $x\leq y\wedge y\leq x\to x=y$, which is equivalent to $x\leq y\to \lnot (y\leq x)\vee x=y$. Hence, we have either $\lnot(y\leq x)$ or $x=y$. But since we already have established $x\neq y$, we must have $\lnot(y\leq x)$. Then $\lnot(y\leq x) \vee x=y$ is also true, which means 
+For irreflexivity, for any $x\in X$, since it is not true that $x\neq x$, then we have $\lnot x< x$. 
+
+For asymmetry, suppose $x< y$, then $x\leq y$ and $x\neq y$. By anti-symmetry, we have $x\leq y\wedge y\leq x\to x=y$, which is equivalent to $x\leq y\to \lnot (y\leq x)\vee x=y$. Hence, we have either $\lnot(y\leq x)$ or $x=y$. But since we already have established $x\neq y$, we must have $\lnot(y\leq x)$. Then $\lnot(y\leq x) \vee x=y$ is also true, which means $\lnot(y\leq x \wedge x\neq y)$ is true. Hence, $\lnot y< x$. 
+
+For transitivity, suppose $x< y$ and $y < z$, we have $x\leq y$, $y\leq z$, $x\neq y$ and $y\neq z$. By transitivity of $\leq$, we have $x\leq z$. It remains to show $x\neq z$. Suppose, on the contrary, that $ x = z$. Then we would have $x \leq y$ and $y\leq x$ simultaneously. By anti-symmetry, this means $x=y$, which is a contradiction. Therefore, we must have $x\neq z$.
+<br>&#x25A1;
+
+<b>Proposition 8.</b> Let $(X, <>)$ be an strictly ordered set. Let $\leq$ be a relation defined by for any $x,y\in X$, $x \leq y$ if and only if $x< y$ or $x = y$. Then $\leq$ is a ordering. 
+
+<i>Proof</i>
+
+To show reflexivity, for any $x$, clearly $x=x$, so $x\leq x$.
+
+To show anti-symmetry, suppose $x\leq y$ and $y\leq x$, we have $(x<y\vee x=y)$ and $(y< x\vee y=x)$. By De Morgan's law, we have $(x< y\wedge y<x)\vee x=y$. By asymmetry, $x<y\wedge y<x$ cannot be true, so we have $x=y$.
+
+To show transitivity, if $x\leq y$ and $y \leq z$. We have four case. 
+- <i>$x< y$ and $y< z$.</i> Transitivity implies $x < z$. Hence, $x\leq z$.
+- <i>$x < y$ and $y = z$.</i> Immediately, $x < z$ and hence $x\leq z$
+- <i>$x = y$ and $y< z$.</i> Immediately, $z < z$ and hence $x\leq z$
+- <i>$x = y$ and $y = z$.</i> Clearly, $x=z$ and so $x\leq z$.
+
+<br>&#x25A1;
+
+How should the real numbers be ordered? A property that we want the real numbers to respect is to 
