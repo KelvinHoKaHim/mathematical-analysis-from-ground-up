@@ -48,14 +48,14 @@ There is a point that needs to be addressed before we proceed any further. Atten
 
 ## Measurement and Commesurability
 
-It is difficult to study the notion of "continuity" along without reference to real life instances of continuity such as the breath of a bar. To connect the abstract world of mathematics with real occurence, we need to art of <i>measurement</i> 
+It is difficult to study the notion of "continuity" along without reference to real life instances of continuity such as the breath of a rod. To connect the abstract world of mathematics with real occurence, we need the art of <i>measurement</i> 
 
 Greek mathematician, who had a sharp distinction between the discrete and the continuous. Did not conceived of numbers as a measure of continuous magnitude. Numbers, for all they knew, only referred to natural numbers. They are nothing but measure of discrete quantities. But without numbers, how could we describe the length of an extended object? The answer was adopting a suitable unit.
 
-Given two iron bars of different length, how should we describe their difference in length? That would require a common unit that we apply on the two bars, and then the length of the bars would be described as an integer multiple of that unit. 
+Given two iron rods of different length, how should we describe their difference in length? That would require a common unit that we apply on the two rods, and then the length of the rods would be described as an integer multiple of that unit. 
 
 
-Suppose that we have two bars $A$ and $B$, each with length $5$ units and $2$ units. We can describe the length of $A$ with the length of $B$ without explicitly referring to their common unit. which to express the relation of their length as ratios. In our case, the length of $A$ and $B$ has a ratio of $5:2$. Then, to find the length of $A$ given $B$, we can divide $B$ into two parts, then add up the length of that part five times. The resultant length of be equivalent to that of $A$. 
+Suppose that we have two rods $A$ and $B$, each with length $5$ units and $2$ units. We can describe the length of $A$ with the length of $B$ without explicitly referring to their common unit. which to express the relation of their length as ratios. In our case, the length of $A$ and $B$ has a ratio of $5:2$. Then, to find the length of $A$ given $B$, we can divide $B$ into two parts, then add up the length of that part five times. The resultant length of be equivalent to that of $A$. 
 
 Putting all those cumbersome terminologies aside, this is basically saying that the relation of the length of $A$ and length of $B$ can be expressed as
 
@@ -67,8 +67,8 @@ Hence, it seemed that any length could either be described by an integer multipl
 
 But this method of measurement assumed that for any two length, there exists a common unit that can express the two lengths as integer multiple of the common unit. This is indeed the assumption of the Greek, who call such a property <i>Commeasurability</i>.
 
-![two-bars](image/2025-06-25-real-number-01.jpg){: w="700"}
-_Comparing the length of two bars._
+![two-rods](image/2025-06-25-real-number-01.jpg){: w="700"}
+_Comparing the length of two rods._
 ## Pythagoras Theorem Exposes Fault of the Rational Numbers
 
 The Pythagorean theorem was well-known in many ancient cultures, including the Babylonians and Indians, but it was the Greeks who first provided a proof, to which its discovery was often attributed to the Pythagorean school.
@@ -85,27 +85,33 @@ where $c$ is the length of the hypotenuse and $a$ and $b$ are the lengths of the
 
 Let $\Delta ABC$ be right-angled triangle with $\angle ABC$ as the right angle. Produce $D$ on line $AC$ such that $BD$ is perpendicular to $AC$.
 
-We would like to show that $\Delta AD\sim \Delta ABC$ and $\Delta BDC\sim \Delta ABC$. 
+We would like to show that $\Delta ADB\sim \Delta ABC$ and $\Delta BDC\sim \Delta ABC$. 
 
 First, $\Delta ADB$ and $\Delta ABC$ shares the same common angle $\angle BAC$. Moreover, since $\angle ABC$ and $\angle BDC$ are given to be right angle, by AA, $\Delta ADB\sim \Delta ABC$
 
 Arguing similarly, $\Delta BDC$ and $\Delta ABC$ shares the same common angle $\angle ACB$. Also, $\angle ABC$ and $\angle BDC$ are right angles. By AA, $\Delta BDC\sim\Delta ABC$
 
 By leveraging proportionality of the three sides, $\Delta ADB\sim \Delta ABC$ implies 
+
 $$
 \frac{AD}{AB} = \frac{AB}{AC}\\
 AB^2 = AC\times AD
 $$
+
 Similarly, $\Delta BDC\sim\Delta ABC$ implies 
+
 $$
+
 \frac{BC}{AC} = \frac{DC}{BC}\\
 BC^2 = AC\times DC
 $$
+
 Now since $\angle ADC$ equal two right angle, $A,D,C$ are collinear. Then we also have 
 $$
 AD + DC = AC
 $$
 Finally, we have 
+
 $$
 AB^2 + BC^2 = (AD+DC)\times AC = AC^2
 $$
@@ -139,7 +145,7 @@ In the next few section, we will try to achieve the following thing:
 ![hierarchy-of-numbers](image/2025-06-25-real-number-03.jpg){: w="700"}
 _The hierarchy of numbers._
 
-## Real Number is a Field
+## Real Numbers Form a Field
 A field is a fancy way to say that we are able to perfrom addition, substraction, multicationa and division between elements in the sets. Where addition and multiplcation are equipped with the nice properties that we expect from usual algebraic operation, that is <i>commutativity</i>, <i>associativity</i>, and <i>distributivity</i>. 
 Now, it is quite clear that we want to do all these operations on the real number line.
 
@@ -274,8 +280,8 @@ $$
 Hence, $\mathbb F$ is a singleton. 
 <br>&#x25A1;
 
-Propositions I have proved here are nothing amazing. We have been using them since a little kid. I have reproduced their proof in great detail anyway, with the intent to emphasise that these proposition which we deem obvious are ultimately grounded by commutativity, associativty, and distributivity. 
-## Real Numbers is Ordered
+Propositions I have proved here are nothing amazing. Even little kid uses them. I have reproduced their proof in great detail anyway, with the intent to emphasize that these proposition which we deem obvious are ultimately grounded by commutativity, associativity, and distributivity. 
+## Real Numbers are Ordered
 
 Take two distinct real numbers, we have mentioned that no matter how small the difference are, there are always a third number in between. Now to have a notion of betweeness, we necessarily presuppose orderedness in the real number line. For to say $c$ is between $a$ and $b$, is to say either $a < c < b$ or $b < c < a$. Moreover, it seemed betweenness only make sense if every two real number can be compared. 
 
@@ -295,7 +301,7 @@ Moreover, $R$ is said be a total ordering if for any $x,y\in X$, either $xR y$ o
 2. <i>Asymmetry.</i> For any $x,y\in X$ if $xRy$, then $\lnot yRx$. 
 3. <i>Transitivity.</i> For any $x,y,z\in X$, if $xRy$ and $yRz$, then $xRz$.
 
-Moreover, $R$ is said be a strict total ordering if for any $x,y\in X$, either $xR y$ or $y Rx$.
+Moreover, $R$ is said be a strict total ordering if for any $x,y\in X$, either $xR y$, $y Rx$, or $x=y$.
 
 We usually denote ordering by $\leq$ or $\geq$, and strict ordering by $<$ or $>$. The notation implied the two definitions captures the idea of non-strict ordering that conveys the idea of "less than or equal to", and strict ordering conveys the idea of "less than and not equal to". Of course, this claim needs proof. 
 
@@ -309,7 +315,7 @@ For asymmetry, suppose $x< y$, then $x\leq y$ and $x\neq y$. By anti-symmetry, w
 For transitivity, suppose $x< y$ and $y < z$, we have $x\leq y$, $y\leq z$, $x\neq y$ and $y\neq z$. By transitivity of $\leq$, we have $x\leq z$. It remains to show $x\neq z$. Suppose, on the contrary, that $ x = z$. Then we would have $x \leq y$ and $y\leq x$ simultaneously. By anti-symmetry, this means $x=y$, which is a contradiction. Therefore, we must have $x\neq z$.
 <br>&#x25A1;
 
-<b>Proposition 8.</b> Let $(X, <>)$ be an strictly ordered set. Let $\leq$ be a relation defined by for any $x,y\in X$, $x \leq y$ if and only if $x< y$ or $x = y$. Then $\leq$ is a ordering. 
+<b>Proposition 8.</b> Let $(X, <)$ be a strictly ordered set. Let $\leq$ be a relation defined by for any $x,y\in X$, $x \leq y$ if and only if $x< y$ or $x = y$. Then $\leq$ is a ordering. 
 
 <i>Proof</i>
 
@@ -325,4 +331,150 @@ To show transitivity, if $x\leq y$ and $y \leq z$. We have four case.
 
 <br>&#x25A1;
 
-How should the real numbers be ordered? A property that we want the real numbers to respect is to 
+Therefore, order and strict order are essentially the same thing. When we are talking about an ordered set, we can freely switch between "$\leq$" and $"<"$, depending on which one is more convenient for the situation.
+
+How should the real numbers be ordered? Think back on the two iron rods. We already know that rod $A$ is longer than rod $B$. Symbolically, 
+
+$$
+\text{length}_A > \text{length}_B.
+$$
+
+Now imagine we were to <i>extend</i> the two rods by the same length, say 2 cm, the now extended rod $A$ should still be longer than extended rod $B$.
+
+$$
+\text{length}_A + 2cm > \text{length}_B + 2cm
+$$
+
+We could do the same thought experiment with <i>scaling</i> as well. Suppose we were to scale the length of the two rod by a factor of, say, 7. The scaled rod $A$ is still longer than the scaled rod $B$.
+
+$$
+5\times\text{length}_A > 5\times\text{length}_B
+$$
+
+I believe these two observation is obvious enough to everyone. Simple, but insightful, as these two formulation connected the notion of ordering with addition and multiplication. We have previously viewed the reals as a field and as an ordered set independently. Now, we can unify the two notion into one 
+
+<b>Definition 4. (Ordered field)</b> Let $\mathbb F$ be a field and $<$ is an ordering on $\mathbb F$. $\mathbb F$ is a order field if it satisfy the following:
+- for any $x,y,z\in\mathbb F$, $x< y$ implies $x+z < y+z$.
+- for any $x,y,z\in\mathbb F$, where $z > 0$, $x < y$ implies $zx < zy$.
+
+Now we know that the set of real numbers is a ordered field.
+
+Okay. Here come some boring proposition proving. I will go over them more quickly this time. 
+
+<b>Proposition 8.</b> Let $\mathbb F$ be an ordered field, then the following are true
+1. For any non-zero $x\in\mathbb F$, $x > 0$ if and only if $-x < 0$.
+2. For any non-zero $x\in\mathbb F$, $x^2 = x\cdot x >0$.
+3. If $\mathbb F$ is not a singleton, $1>0$.
+4. Every natural number is positive 
+
+<i>Proof.</i> 
+
+1).
+$$
+\begin{align*}
+& x >0\\
+\Leftrightarrow & x -x > -x\\
+\Leftrightarrow & 0 > -x
+\end{align*}
+$$
+
+2). Since $\mathbf F$ is strictly ordered, we have either $x< 0, x= 0$, or $x > 0$. Since $x$ is non-zero, we are left with $x>0 $ or $x<0$. If $x>0$, then the definition of ordered field grants that $x^2 >0$. If $x < 0$, then 1.) imples $-x >0$. Then we have 
+$$
+\begin{align*}
+(-a)^2 - a^2 &= (-a)^2 + (-a)a\\
+&= (-a)(-a+a)\\
+&= 0\\
+&= a^2 - a^2
+\end{align*}
+$$
+Hence, $(-a)^2 = a^2$.
+
+3.) Since $1\neq 0$, $1 = 1^2 > 0$.
+
+4.) Let $P(n)$ be the proposition that $n > 0$. We have already proved the base case in 3.). It remains to prove the induction step. Suppose $k>0$ for some natural number $k$, then $k+1 > 1 > 0$. Transitivity grants that $k+1 > 0$.
+<br>&#x25A1;
+
+<b>Proposition 9.</b> Let $\mathbb F$ be an ordered field. Then the following hold:
+1. If $x,y>0$, then $xy>0$.
+2. $x > 0$ if and only if $x^{-1} > 0$
+3. Suppose $x,y\in\mathbb F$ such that $xy>0$, then $x > 0$ and $y>0$, or $x< 0$ and $y < 0$. 
+4. Suppose $x,y\in\mathbb F$ such that $xy < 0$, then $x < 0$ and $y>0$, or $x > 0$ and $y < 0$. 
+
+<i>Proof.</i> 
+
+1.) Since $x>0$, $y>0$, definition of ordered field grants $xy>0$.
+
+2.) Suppose not, without loss of generality, then there is $x\in\mathbb F$ such that $x>0$ and $x^{-1} < 0$. Then we have $0 < x\cdot(-x^{-1}) = - (xx^{-1})= -1$. A contradiction.
+
+3.)
+$xy>0$ implies $x,y\neq 0$. Since if any one of them are zero, then $xy$ is zero.
+Now suppose it is not the case that $x<0$ and $y<0$, then either $x>0$ or $y>0$. Without loss of generality, suppose $x>0$, then $x^{-1} > 0$ as well. Therefore,
+$$
+y = x^{-1}(xy) >0
+$$
+
+4.) Trivial logic exercise.
+<br>&#x25A1;
+
+## Real Numbers are Complete
+
+Now on to the most important property of the real number--<i>Completeness</i>, i.e. there are no "gaps" on the real number line.
+
+We can intuitively grasp, at least vaguely, what it means for something to have no gaps. But how do we formalise it? 
+This is in fact a very challenging task. 
+If a line is discontinuous, we cannot locate the gaps by directly pointing at them. Since gaps are exactly those points that are missing from the line. We need to locate these gaps indirectly. 
+
+This was the problem that troubled Dedekind for a very long time. But finally, he came up with an ingenious idea. Imagine if we select a point from a straight line, then the remaining points will nicely sort themselves into two classes. Namely, those that are to the left of the selected point, and those that are to the right. Now Dedekind asks us to image the converse. He said 
+> If all points of the straight line fall into two classes such that every point of the first class lies to the left of every point of the second class, then there exists one and only one point which produces this division of all points into two classes, this severing of the straight line into two portions.
+
+So we have two classes $A_1$ and $A_2$. The two class have the property that for any $x\in A_1, y\in A_2$, $x_1 < x_2$. If our line is continuous, there is exactly a point $x^*$ that lies at the boundary of the two sets, i.e. $x_1 \leq x^* \leq x_2$.
+
+Now this is a property a line with gaps lack. For exmaple, on the rational line, if we define 
+$$
+A_1 = \{x\in\mathbb{Q}\mid x<0 \text{ or }x^2 < 2\}\\
+A_2 = \{x\in\mathbb{Q}\mid x>0 \text{ and }x^2 > 2\}
+$$
+Then $A_1$ and $A_2$ cuts $\mathbb{Q}$ into two parts
+
+![rational-partition](image/2025-06-25-real-number-05.jpg){: w="700"}
+_$A_1$ and $A_2$ cuts $\mathbb{Q}$ into two parts._
+
+Note that we cannot find a point on $\mathbb Q$ that lies at the boundary of $A_1$ and $A_2$, since this point of division is exactly $\sqrt{2}$! But a continuous line can!
+
+What all these characterisation amounts to is what modern mathematicians call the <i>least upper bound property</i>
+
+<b>Definition 5. (Least upper bound/greatest lower bound)</b> Let $X$ be an ordered set and $A\subseteq X$ be a subset. $u\in X$ is an upper(lower) bound of $A$ if for any $x\in A$, $u \geq(\leq) x$.6
+
+<b>Definition 6. (Least upper bound/greatest lower bound)</b> Let $X$ be an ordered set and $A\subseteq X$ be a subset. Suppose $u\in X$ is an upper(lower) bound of $A$. Then $u$ is the least upper bound (greatest lower bound) if for any upper bound (lower bound) $v\in X$, $u\leq(\geq) v$.
+
+What a mouthful. Mathematician prefer to call a least upper bound the <i>supremum</i>, and the greatest lower bound the <i>infimum</i>. In our case, $\sqrt{2}$ is exactly the supremum of $A_1$, and the infimum of $A_2$. 
+
+Now an important point to note is this: If we have a point, there is only one pair of cuts that have this specific point lying at their boundaries. What pair? Easy, given point $p$, the exact corresponding cuts are 
+
+$$
+B_1 = \{x:x<p\}\\
+B_2 = \{x:x>p\}.
+$$
+
+But we should also notice that the converse is true. 
+
+<b>Proposition 10.</b> Let $X$ be ordered and $A\subseteq X$ is bounded above. Then its supremum is unique.
+
+<i>Proof.</i> Let $u,u'$ both be supremum of $A$. Since they are least upper bounds, $u\leq u'$ and $u'\leq u$. So $u=u'$.
+<br>&#x25A1;
+
+<b>Remark 2.</b> Mathematician uses $\sup A$ and $\inf A$ to denote $A$'s supremum and infimum.
+
+Now there is a one-one correspondence between pairs of cuts and points.
+
+$$
+(A_1, A_2) \longleftrightarrow p
+$$
+
+Here's the cool thing. This point $p$ might or might not exist on the line; but the cut must necessarily exists. Since the cuts are defined in a way that refers to nothing but elements on the line (Recall that Dedekind define $A_1,A_2$ as a pair of sets such that for any $x_1\in A_2,x_2\in A_2$, $x_1<x_2$). Now we have a definition! We can look at the cuts of a line. If we find a particular cut whose supremum (of the left cut) and infimum (of the right cut) does not exists, then the line is discontinuous. Actually, if the supremum and infimum of cuts refers to the same point, why bother with a pair of sets when one is enough? Hence, we have our modern definition of continuity of a line. 
+
+<b>Definition 7. (Dedekind completeness)</b> Let $X$ be an ordered set. $X$ is Dedekind complete if it satisfy the least upper bound property, that is, for any subseteq $A\subseteq X$ that is bounded above, $A$ has a supremum.
+
+We have it. The real number system is a (Dedekind) complete ordered field!
+
+## Properties of Complete Ordered Field and Aristotle's Concept of Continuity
