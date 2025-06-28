@@ -478,3 +478,5 @@ Here's the cool thing. This point $p$ might or might not exist on the line; but 
 We have it. The real number system is a (Dedekind) complete ordered field!
 
 ## Properties of Complete Ordered Field and Aristotle's Concept of Continuity
+
+TODO
